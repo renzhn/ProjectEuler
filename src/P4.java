@@ -6,16 +6,16 @@ public class P4 {
 
 	//Largest palindrome product
 	public static void main(String[] args) {
-		for (int i = MAX; i >= 0; i--) {
-			for (int j = MAX; j >= 0; j--) {
+		for (int i = MAX; i >= 100; i--) {
+			for (int j = MAX; j >= 100; j--) {
 				int p = i * j;
 				product[i][j] = isPalindrome(p) ? p : 0;
 			}
 		}
 		int a= MAX, b = MAX;
 		int max = product[MAX][MAX];
-		for (int i = MAX; i >= 0; i--) {
-			for (int j = MAX; j >= 0; j--) {
+		for (int i = MAX; i >= 100; i--) {
+			for (int j = MAX; j >= 100; j--) {
 				if (product[i][j] > max){
 					a = i;
 					b = j;
